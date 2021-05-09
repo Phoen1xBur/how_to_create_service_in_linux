@@ -4,5 +4,20 @@
 	<ul><li><b><i>cd /lib/systemd/system/</b></i></li></ul>
 	<li>And create file in this directory (*.service)</li>
 	<ul><li><b><i>vim super_name.service</b></i></li></ul>
-	<li>t</li>
+	<li>Write your service:</li>
+	<p align='center' style='font-fize:24px;'>
+		[Unit]
+		Description=Start server for update all orders in DataBase
+		After=mariadb.service
+		[Service]
+		Environment=PYTHONUNBUFFERED=true
+		Type=notify
+		#Type=idle
+		#ExecStartPre=/root/server-idealist/bin/activate
+		ExecStart=/root/server-idealist/bin/python /root/server-idealist/loop.py
+		Restart=always
+		WatchdogSec=15
+		[Install]
+		WantedBy=multi-user.target
+	</p>
 </ol>
