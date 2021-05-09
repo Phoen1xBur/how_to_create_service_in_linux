@@ -22,4 +22,8 @@ Restart=always
 WantedBy=multi-user.target
 		</pre>
 	</p>
+	<li>Restart daemon</li>
+	<ul><li><b><i>daemon-reload</b></i></li></ul>
+	<li>Start programm</li>
+	<ul><li><b><i>systemctl enable super_name.service</b></i></li></ul>
 </ol>
