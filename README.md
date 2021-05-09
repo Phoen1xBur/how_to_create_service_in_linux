@@ -7,18 +7,18 @@
 	<li>Write your service:</li>
 	<p>
 		<pre>
-			[Unit]
-			Description=Super puper description your service
-			After=mariadb.service  # if your service need work on DB
-			[Service]
-			Environment=PYTHONUNBUFFERED=true  # If u need to python print info in status service
-			Type=notify
-			#ExecStartPre=/root/server-idealist/bin/activate  # If need pre start programm
-			ExecStart=/root/server-idealist/bin/python /root/server-idealist/loop.py  # Your programm(python script)
-			Restart=always
-			#WatchdogSec=15  # For check die programm or no
-			[Install]
-			WantedBy=multi-user.target
+[Unit]
+Description=Super puper description your service
+After=mariadb.service  # if your service need work on DB
+[Service]
+Environment=PYTHONUNBUFFERED=true  # If u need to python print info in status service
+Type=notify
+#ExecStartPre=/root/server-idealist/bin/activate  # If need pre start programm
+ExecStart=/root/server-idealist/bin/python /root/server-idealist/loop.py  # Your programm(python script)
+Restart=always
+#WatchdogSec=15  # For check die programm or no
+[Install]
+WantedBy=multi-user.target
 		</pre>
 	</p>
 </ol>
