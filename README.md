@@ -5,7 +5,7 @@
 	<li>And create file in this directory (*.service)</li>
 	<ul><li><b><i>vim super_name.service</b></i></li></ul>
 	<li>Write your service:</li>
-	<p align='center'>
+	<p>
 		<pre>
 		[Unit]
 		Description=Start server for update all orders in DataBase
