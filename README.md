@@ -7,19 +7,19 @@
 	<li>Write your service:</li>
 	<p>
 		<pre>
-		[Unit]
-		Description=Start server for update all orders in DataBase
-		After=mariadb.service
-		[Service]
-		Environment=PYTHONUNBUFFERED=true
-		Type=notify
-		#Type=idle
-		#ExecStartPre=/root/server-idealist/bin/activate
-		ExecStart=/root/server-idealist/bin/python /root/server-idealist/loop.py
-		Restart=always
-		WatchdogSec=15
-		[Install]
-		WantedBy=multi-user.target
+			[Unit]
+			Description=Start server for update all orders in DataBase
+			After=mariadb.service
+			[Service]
+			Environment=PYTHONUNBUFFERED=true
+			Type=notify
+			#Type=idle
+			#ExecStartPre=/root/server-idealist/bin/activate
+			ExecStart=/root/server-idealist/bin/python /root/server-idealist/loop.py
+			Restart=always
+			WatchdogSec=15
+			[Install]
+			WantedBy=multi-user.target
 		</pre>
 	</p>
 </ol>
