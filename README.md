@@ -6,6 +6,7 @@
 	<ul><li><b><i>vim super_name.service</b></i></li></ul>
 	<li>Write your service:</li>
 	<p align='center' style='font-fize:24px;'>
+		<pre>
 		[Unit]
 		Description=Start server for update all orders in DataBase
 		After=mariadb.service
@@ -19,5 +20,6 @@
 		WatchdogSec=15
 		[Install]
 		WantedBy=multi-user.target
+		</pre>
 	</p>
 </ol>
