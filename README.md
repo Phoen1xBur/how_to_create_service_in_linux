@@ -12,7 +12,8 @@ Description=Super puper description your service
 After=mariadb.service  # if your service need work on DB
 [Service]
 Environment=PYTHONUNBUFFERED=true  # If u need to python print info in status service
-Type=notify
+Type=idle
+#Type=notify  # Если будут отправлять ответы системе что все ок
 #ExecStartPre=/root/server-idealist/bin/activate  # If need pre start programm
 # Path to python and path to python script need to start
 ExecStart=/root/server-idealist/bin/python /root/server-idealist/loop.py  # Your programm(python script)
